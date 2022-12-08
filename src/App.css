@@ -1,0 +1,10 @@
+.allCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.card {
+    border: 1px solid black;
+    height: 20rem;
+    width: 15rem;
+}
