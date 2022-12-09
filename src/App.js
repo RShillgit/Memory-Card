@@ -2,6 +2,20 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Card from './components/card';
 import uniqid from "uniqid";
+import githubMark from './images/github-mark.png';
+import slugMonster from './images/slug-monster.png';
+import babyMonster from './images/baby-monster.png';
+import businessMonster from './images/business-monster.png';
+import flyingMonster from './images/flying-monster.png';
+import goofyMonster from './images/goofy-monster.png';
+import hairyMonster from './images/hairy-monster.png';
+import happyMonster from './images/happy-monster.png';
+import headphoneMonster from './images/headphone-monster.png';
+import pumpkinMonster from './images/pumpkin-monster.png';
+import saberToothedMonster from './images/saber-toothed-monster.png';
+import scaryMonster from './images/scary-monster.png';
+import yetiMonster from './images/yeti-monster.png';
+
 
 const App = () => {
 
@@ -11,104 +25,78 @@ const App = () => {
 
   const [card, setCard] = useState([
     {
-      src: '',
-      text: 'Card 1',
+      src: slugMonster,
+      text: 'Slug Monster',
       id: uniqid(),
       clicked: false
     },
     {
-      src: '',
-      text: 'Card 2',
+      src: babyMonster,
+      text: 'Baby Monster',
       id: uniqid(),
       clicked: false
     },
     {
-      src: '',
-      text: 'Card 3',
+      src: businessMonster,
+      text: 'Business Monster',
       id: uniqid(),
       clicked: false
     },
     {
-      src: '',
-      text: 'Card 4',
+      src: flyingMonster,
+      text: 'Flying Monster',
       id: uniqid(),
       clicked: false
     },
     {
-      src: '',
-      text: 'Card 5',
+      src: goofyMonster,
+      text: 'Goofy Monster',
       id: uniqid(),
       clicked: false
     },
     {
-      src: '',
-      text: 'Card 6',
+      src: hairyMonster,
+      text: 'Hairy Monster',
       id: uniqid(),
       clicked: false
     },
     {
-      src: '',
-      text: 'Card 7',
+      src: happyMonster,
+      text: 'Happy Monster',
       id: uniqid(),
       clicked: false
     },
     {
-      src: '',
-      text: 'Card 8',
+      src: headphoneMonster,
+      text: 'Headphone Monster',
       id: uniqid(),
       clicked: false
     },
     {
-      src: '',
-      text: 'Card 9',
+      src: pumpkinMonster,
+      text: 'Pumpkin Monster',
       id: uniqid(),
       clicked: false
     },
     {
-      src: '',
-      text: 'Card 10',
+      src: saberToothedMonster,
+      text: 'Saber Toothed Monster',
       id: uniqid(),
       clicked: false
     },
     {
-      src: '',
-      text: 'Card 11',
+      src: scaryMonster,
+      text: 'Scary Monster',
       id: uniqid(),
       clicked: false
     },
     {
-      src: '',
-      text: 'Card 12',
+      src: yetiMonster,
+      text: 'Yeti Monster',
       id: uniqid(),
       clicked: false
     },
   ]) 
-
-  const shuffleCards = () => {
-    
-    // Copy card array to a temporary array
-    let shuffledArray = [...card];
-    let currentIndex = shuffledArray.length,  randomIndex;
-
-    // While there remain elements to shuffle.
-    while (currentIndex !== 0) {
-  
-      // Pick a remaining element.
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-  
-      // And swap it with the current element.
-      [shuffledArray[currentIndex], shuffledArray[randomIndex]] = [
-        shuffledArray[randomIndex], shuffledArray[currentIndex]];
-    }
-  
-    // Set card array to shuffled array
-    setCard(shuffledArray);
-
-  }
-
-
-
 
   // Every time the card array changes check if the game is over
   useEffect(() => {
@@ -133,7 +121,8 @@ const App = () => {
       setGameOver(false);
     }
 
-  }, [gameOver]);
+  }, [gameOver, bestScore, score]);
+
 
   // Every time the score changes shuffle the cards
   useEffect(() => {
@@ -158,6 +147,7 @@ const App = () => {
     setCard(shuffledArray);
     
   }, [score])
+
 
   const handleCardClick = (id) => {
 
@@ -188,50 +178,20 @@ const App = () => {
         }
       }
     }
-
-    /*
-    setCard(c => 
-      c.map(obj => {
-        if (obj.id === id) {
-
-          // This is where there would be some type of game over logic
-          if (obj.clicked === true) {
-
-            // Set Game Over to true
-            //setGameOver(true);
-
-            //declareGameOver();
-          }
-
-          else {
-
-            // Set clicked to true
-            return {...obj, clicked: true}
-          }
-        }
-
-        return obj;
-    }))
-
-    If (gameOver === false) {
-        // Incriment Score
-      setScore(score + 1);
-
-      // Shuffle cards function
-      shuffleCards();
-    }
-    */
-
-    // Run the gameContinue function somehow, but when its called 
-    // From this function, it makes all of the clicked: false
-    //gameContinue();
   }
 
   return (
     <div className="App">
 
       <div className='header'>
-        <h1>Win By Clicking Each Card Once</h1>
+        <h1>Monster Memory</h1>
+        <a href="https://github.com/RShillgit/memory-card">
+          <img id='github' src={githubMark} alt="gihub"/>
+        </a>
+      </div>
+
+      <div className='instructions'>
+        <h2>Win By Clicking Each Card Once</h2>
       </div>
 
       <div className='scoreBoard'>
@@ -240,8 +200,9 @@ const App = () => {
       </div>
 
       <div className='allCardsContainer'>
-        {card.map(c => <Card text={c.text} key={c.id} identifier={c.id} cardClick={handleCardClick}/>)}
+        {card.map(c => <Card src={c.src} text={c.text} key={c.id} identifier={c.id} cardClick={handleCardClick}/>)}
       </div>
+
     </div>
   );
 }
