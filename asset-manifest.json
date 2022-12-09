@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.fec20e6d.css",
+    "main.js": "/memory-card/static/js/main.bb43ce3e.js",
+    "static/media/pumpkin-monster.png": "/memory-card/static/media/pumpkin-monster.4f44f11a644b775a845a.png",
+    "static/media/headphone-monster.png": "/memory-card/static/media/headphone-monster.f72db77cc75c3b88b069.png",
+    "static/media/scary-monster.png": "/memory-card/static/media/scary-monster.d9422799177717a7ee74.png",
+    "static/media/slug-monster.png": "/memory-card/static/media/slug-monster.15abc2161d341b5faf9f.png",
+    "static/media/business-monster.png": "/memory-card/static/media/business-monster.71fd1b6cd60d5f6c5ead.png",
+    "static/media/yeti-monster.png": "/memory-card/static/media/yeti-monster.2033f7f5e06727d51ced.png",
+    "static/media/goofy-monster.png": "/memory-card/static/media/goofy-monster.8824109a4a8462db7fc9.png",
+    "static/media/happy-monster.png": "/memory-card/static/media/happy-monster.ccbea1651440a008f56b.png",
+    "static/media/flying-monster.png": "/memory-card/static/media/flying-monster.1a7dfc35b1354819399a.png",
+    "static/media/baby-monster.png": "/memory-card/static/media/baby-monster.69a610ca66cb20cedca8.png",
+    "static/media/hairy-monster.png": "/memory-card/static/media/hairy-monster.cdaaf337fc68489eb72e.png",
+    "static/media/Creepster-Regular.ttf": "/memory-card/static/media/Creepster-Regular.7e29388744fe1602e58c.ttf",
+    "static/media/saber-toothed-monster.png": "/memory-card/static/media/saber-toothed-monster.5c7f750386c8a0a34c88.png",
+    "index.html": "/memory-card/index.html",
+    "main.fec20e6d.css.map": "/memory-card/static/css/main.fec20e6d.css.map",
+    "main.bb43ce3e.js.map": "/memory-card/static/js/main.bb43ce3e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fec20e6d.css",
+    "static/js/main.bb43ce3e.js"
+  ]
+}
